@@ -1,0 +1,5 @@
+.gradle
+.idea
+
+docs/sphinx-doc/build
+docs/sphinx-doc/jupyter_execute
