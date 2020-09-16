@@ -1,0 +1,174 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lets_plot.export package &#8212; lets-plot  documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="lets_plot.frontend_context package" href="lets_plot.frontend_context.html" />
+    <link rel="prev" title="lets_plot package" href="lets_plot.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.frontend_context.html" title="lets_plot.frontend_context package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.html" title="lets_plot package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="lets_plot.html" accesskey="U">lets_plot package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">lets_plot.export package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lets-plot-export-package">
+<h1>lets_plot.export package<a class="headerlink" href="#lets-plot-export-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-lets_plot.export.simple">
+<span id="lets-plot-export-simple-module"></span><h2>lets_plot.export.simple module<a class="headerlink" href="#module-lets_plot.export.simple" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="lets_plot.export.simple.export_html">
+<code class="sig-prename descclassname">lets_plot.export.simple.</code><code class="sig-name descname">export_html</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>lets_plot.plot.core.PlotSpec<span class="p">, </span><a class="reference internal" href="lets_plot.plot.html#lets_plot.plot.plot.GGBunch" title="lets_plot.plot.plot.GGBunch">lets_plot.plot.plot.GGBunch</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">filename</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">iframe</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#lets_plot.export.simple.export_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports plot or <cite>bunch</cite> to a file in HTML format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plot</strong> (<em>PlotSpec or GGBunch object</em>) – Plot specification to export.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Filename to save HTML page under.</p></li>
+<li><p><strong>iframe</strong> (<em>bool</em>) – Whether to wrap HTML page into a iFrame. Default value is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Absolute pathname of created HTML file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="lets_plot.export.simple.export_svg">
+<code class="sig-prename descclassname">lets_plot.export.simple.</code><code class="sig-name descname">export_svg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>lets_plot.plot.core.PlotSpec<span class="p">, </span><a class="reference internal" href="lets_plot.plot.html#lets_plot.plot.plot.GGBunch" title="lets_plot.plot.plot.GGBunch">lets_plot.plot.plot.GGBunch</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">filename</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#lets_plot.export.simple.export_svg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports plot or <cite>bunch</cite> to a file in SVG format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plot</strong> (<em>PlotSpec or GGBunch object</em>) – Plot specification to export.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – Filename to save SVG under.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Absolute pathname of created SVG file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">lets_plot.export package</a><ul>
+<li><a class="reference internal" href="#module-lets_plot.export.simple">lets_plot.export.simple module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lets_plot.html"
+                        title="previous chapter">lets_plot package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lets_plot.frontend_context.html"
+                        title="next chapter">lets_plot.frontend_context package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autodoc/lets_plot.export.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.frontend_context.html" title="lets_plot.frontend_context package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.html" title="lets_plot package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="lets_plot.html" >lets_plot package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">lets_plot.export package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, JetBrains.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>
