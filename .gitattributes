@@ -1,0 +1,4 @@
+docs/.doctrees/autodoc/lets_plot.doctree filter=lfs diff=lfs merge=lfs -text
+docs/autodoc/lets_plot.html filter=lfs diff=lfs merge=lfs -text
+docs/.doctrees/autodoc/lets_plot.plot.doctree filter=lfs diff=lfs merge=lfs -text
+docs/autodoc/lets_plot.plot.html filter=lfs diff=lfs merge=lfs -text
