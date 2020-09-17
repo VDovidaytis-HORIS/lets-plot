@@ -30,11 +30,3 @@ lets\_plot.settings\_utils module
    :undoc-members:
    :show-inheritance:
 
-
-Module contents
----------------
-
-.. automodule:: lets_plot
-   :members:
-   :undoc-members:
-   :show-inheritance:
