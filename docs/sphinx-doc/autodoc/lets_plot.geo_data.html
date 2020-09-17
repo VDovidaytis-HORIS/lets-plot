@@ -1,0 +1,1094 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>lets_plot.geo_data package &#8212; lets-plot  documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="lets_plot.plot package" href="lets_plot.plot.html" />
+    <link rel="prev" title="lets_plot.frontend_context package" href="lets_plot.frontend_context.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.html" title="lets_plot.plot package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.frontend_context.html" title="lets_plot.frontend_context package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="lets_plot.html" accesskey="U">lets_plot package</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">lets_plot.geo_data package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lets_plot.geo_data.core">lets_plot.geo_data.core module</a></li>
+<li><a class="reference internal" href="#module-lets_plot.geo_data.map_geometry">lets_plot.geo_data.map_geometry module</a></li>
+<li><a class="reference internal" href="#module-lets_plot.geo_data.regions">lets_plot.geo_data.regions module</a></li>
+<li><a class="reference internal" href="#module-lets_plot.geo_data.regions_builder">lets_plot.geo_data.regions_builder module</a></li>
+<li><a class="reference internal" href="#module-lets_plot.geo_data.to_geo_data_frame">lets_plot.geo_data.to_geo_data_frame module</a></li>
+<li><a class="reference internal" href="#module-lets_plot.geo_data.type_assertion">lets_plot.geo_data.type_assertion module</a></li>
+<li><a class="reference internal" href="#module-lets_plot.geo_data">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lets_plot.frontend_context.html"
+                        title="previous chapter">lets_plot.frontend_context package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lets_plot.plot.html"
+                        title="next chapter">lets_plot.plot package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autodoc/lets_plot.geo_data.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lets-plot-geo-data-package">
+<h1>lets_plot.geo_data package<a class="headerlink" href="#lets-plot-geo-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-lets_plot.geo_data.core">
+<span id="lets-plot-geo-data-core-module"></span><h2>lets_plot.geo_data.core module<a class="headerlink" href="#module-lets_plot.geo_data.core" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lets_plot.geo_data.core.distance">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">distance</code><span class="sig-paren">(</span><em class="sig-param">lon0</em>, <em class="sig-param">lat0</em>, <em class="sig-param">lon1</em>, <em class="sig-param">lat1</em>, <em class="sig-param">units='km'</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.core.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the distance between two points. Returns result in kilometers or miles.</p>
+<p>distance(lon0, lat0, lon1, lat1, units)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lon0</strong> (<em>number</em>) – Longitude coordinate of the first point.</p></li>
+<li><p><strong>lat0</strong> (<em>number</em>) – Latitude coordinate of the first point.</p></li>
+<li><p><strong>lon1</strong> (<em>number</em>) – Longitude coordinate of the second point.</p></li>
+<li><p><strong>lat1</strong> (<em>number</em>) – Latitude coordinate of the second point.</p></li>
+<li><p><strong>units</strong> (<em>[string | None]</em>) – The units in which the result will be obtained.
+There are shorthands for values: ‘mi’(miles), ‘km’(kilometers).
+Default is kilometers.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>object</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>distance() calculates the distance between two points.</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dist</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="o">-</span><span class="mf">99.25061</span><span class="p">,</span> <span class="mf">31.25044</span><span class="p">,</span> <span class="o">-</span><span class="mf">105.50083</span><span class="p">,</span> <span class="mf">39.00027</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.core.regions_builder">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">regions_builder</code><span class="sig-paren">(</span><em class="sig-param">level=None</em>, <em class="sig-param">request=None</em>, <em class="sig-param">within=None</em>, <em class="sig-param">highlights=False</em><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions_builder.RegionsBuilder<a class="headerlink" href="#lets_plot.geo_data.core.regions_builder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a RegionBuilder class by level and request. Allows to refine ambiguous request with
+where method. build() method creates Regions object or shows details for ambiguous result.</p>
+<p>regions_builder(level, request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> (<em>[‘country’ | ‘state’ | ‘county’ | ‘city’ | None]</em>) – The level of administrative division. Default is a ‘state’.</p></li>
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).
+For ‘state’ level:
+-‘US-48’ returns continental part of United States (48 states) in a compact form.</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions | None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>RegionsBuilder object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_builder() allows to refine ambiguous request with where() method. Call build() method to create Regions object</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">regions_builder</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;moscow&#39;</span><span class="p">,</span> <span class="s1">&#39;york&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;york&#39;</span><span class="p">,</span> <span class="n">regions_state</span><span class="p">(</span><span class="s1">&#39;New York&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.core.regions">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">regions</code><span class="sig-paren">(</span><em class="sig-param">level=None</em>, <em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions.Regions<a class="headerlink" href="#lets_plot.geo_data.core.regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class by level and request.</p>
+<p>regions(level, request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> (<em>[‘country’ | ‘state’ | ‘county’ | ‘city’ | None]</em>) – The level of administrative division. None is for autodetection, falls back to a ‘state’ in case of ambiguity.</p></li>
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).
+None with explicit level returns all corresponding regions, like all countries i.e. regions(level=’country’).
+For ‘state’ level:
+-‘US-48’ returns continental part of United States (48 states) in a compact form.</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions() is used to get name and object id by level and request.
+If the given names are not found exception will be thrown.</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">regions</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.core.regions_country">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">regions_country</code><span class="sig-paren">(</span><em class="sig-param">request=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.core.regions_country" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for country level by request.</p>
+<p>regions_country(request)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_country() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_country</span> <span class="o">=</span> <span class="n">regions_country</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.core.regions_state">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">regions_state</code><span class="sig-paren">(</span><em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.core.regions_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for state level by request.</p>
+<p>regions_state(request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).
+For ‘state’ level:
+-‘US-48’ returns continental part of United States (48 states) in a compact form.</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then filter and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_state() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_state</span> <span class="o">=</span> <span class="n">regions_state</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Texas&#39;</span><span class="p">,</span> <span class="s1">&#39;Iowa&#39;</span><span class="p">],</span> <span class="n">within</span><span class="o">=</span><span class="s1">&#39;USA&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.core.regions_county">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">regions_county</code><span class="sig-paren">(</span><em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.core.regions_county" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for county level by request.</p>
+<p>regions_county(request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_county() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_county</span> <span class="o">=</span> <span class="n">regions_county</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Calhoun County&#39;</span><span class="p">,</span> <span class="s1">&#39;Howard County&#39;</span><span class="p">],</span> <span class="n">within</span><span class="o">=</span><span class="s1">&#39;Texas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.core.regions_city">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">regions_city</code><span class="sig-paren">(</span><em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.core.regions_city" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for city level by request.</p>
+<p>regions_city(request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_city() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_city</span> <span class="o">=</span> <span class="n">regions_city</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.core.regions_xy">
+<code class="sig-prename descclassname">lets_plot.geo_data.core.</code><code class="sig-name descname">regions_xy</code><span class="sig-paren">(</span><em class="sig-param">lon</em>, <em class="sig-param">lat</em>, <em class="sig-param">level</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.core.regions_xy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-lets_plot.geo_data.map_geometry">
+<span id="lets-plot-geo-data-map-geometry-module"></span><h2>lets_plot.geo_data.map_geometry module<a class="headerlink" href="#module-lets_plot.geo_data.map_geometry" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lets_plot.geo_data.map_geometry.split_by_antimeridian">
+<code class="sig-prename descclassname">lets_plot.geo_data.map_geometry.</code><code class="sig-name descname">split_by_antimeridian</code><span class="sig-paren">(</span><em class="sig-param">df: pandas.core.frame.DataFrame</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#lets_plot.geo_data.map_geometry.split_by_antimeridian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-lets_plot.geo_data.regions">
+<span id="lets-plot-geo-data-regions-module"></span><h2>lets_plot.geo_data.regions module<a class="headerlink" href="#module-lets_plot.geo_data.regions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lets_plot.geo_data.regions.DataFrameProvider">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.regions.</code><code class="sig-name descname">DataFrameProvider</code><a class="headerlink" href="#lets_plot.geo_data.regions.DataFrameProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="lets_plot.geo_data.regions.DataFrameProvider.to_data_frame">
+<em class="property">abstract </em><code class="sig-name descname">to_data_frame</code><span class="sig-paren">(</span><em class="sig-param">features: List[lets_plot.geo_data.gis.response.GeocodedFeature]</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#lets_plot.geo_data.regions.DataFrameProvider.to_data_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.geo_data.regions.Regions">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.regions.</code><code class="sig-name descname">Regions</code><span class="sig-paren">(</span><em class="sig-param">level_kind: lets_plot.geo_data.gis.request.LevelKind, features: List[lets_plot.geo_data.gis.response.GeocodedFeature], highlights: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions.Regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">lets_plot._type_utils.CanToDataFrame</span></code></p>
+<dl class="method">
+<dt id="lets_plot.geo_data.regions.Regions.as_list">
+<code class="sig-name descname">as_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[lets_plot.geo_data.regions.Regions]<a class="headerlink" href="#lets_plot.geo_data.regions.Regions.as_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions.Regions.boundaries">
+<code class="sig-name descname">boundaries</code><span class="sig-paren">(</span><em class="sig-param">resolution: Union[int</em>, <em class="sig-param">str</em>, <em class="sig-param">lets_plot.geo_data.regions.Resolution</em>, <em class="sig-param">None] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions.Regions.boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return boundaries for given regions in form of GeoDataFrame.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>resolution</strong> (<em>[str | int | None]</em>) – Boundaries resolution.</p>
+<dl>
+<dt>int: [1-15]</dt><dd><dl class="simple">
+<dt>15 - maximum quality, 1 - maximum performance:</dt><dd><ul class="simple">
+<li><p>1-3 for world scale view</p></li>
+<li><p>4-6 for country scale view</p></li>
+<li><p>7-9 for state scale view</p></li>
+<li><p>10-12 for county scale view</p></li>
+<li><p>13-15 for city scale view</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>str: [‘world’, ‘country’, ‘state’, ‘county’, ‘city’]</dt><dd><p>‘city’ - maximum quality, ‘world’  - maximum performance.
+Corresponding numeric resolutions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘world’ - 2</p></li>
+<li><p>‘country’ - 5</p></li>
+<li><p>‘state’ - 8</p></li>
+<li><p>‘county’ - 11</p></li>
+<li><p>‘city’ - 14</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+<p>Kind of area expected to be displayed. Resolution depends on a number of objects - single state is a ‘state’
+scale view, while 50 states is a ‘country’ scale view.</p>
+<p>It is allowed to use any kind of resolution for any regions, i.e. ‘city’ for state to see more detailed
+boundary (when need to show zoomed part), or ‘world’ (when used for small preview).</p>
+<dl>
+<dt>None:</dt><dd><p>Autodetection. Uses level_kind that was used for geocoding this regions object and number of objects in it.
+Prefers performance over qulity. It’s expected to get pixelated geometries with autodetection.
+Use explicit resolution for better quality.</p>
+<dl class="simple">
+<dt>Resolution for countries:</dt><dd><p>If n &lt; 3 =&gt; 3
+else =&gt; 1</p>
+</dd>
+<dt>Resolution for states:</dt><dd><p>If n &lt; 3 =&gt; 7
+If n &lt; 10 =&gt; 4
+else =&gt; 2</p>
+</dd>
+<dt>Resolution for counties:</dt><dd><p>If n &lt; 5 =&gt; 10
+If n &lt; 20 =&gt; 8
+else =&gt; 3</p>
+</dd>
+<dt>Resolution for cities:</dt><dd><p>If n &lt; 5 =&gt; 13
+If n &lt; 50 =&gt; 4
+else =&gt; 3</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions.Regions.centroids">
+<code class="sig-name descname">centroids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions.Regions.centroids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return centroids (Point geometry) for given regions in form of GeoDataFrame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions.Regions.limits">
+<code class="sig-name descname">limits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions.Regions.limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return bboxes (Polygon geometry) for given regions in form of GeoDataFrame. For regions intersecting
+anti-meridian bbox will be divided into two and stored as two rows.</p>
+<p class="rubric">Examples</p>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">regions_country</span><span class="p">([</span><span class="s1">&#39;germany&#39;</span><span class="p">,</span> <span class="s1">&#39;russia&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">limits</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>The geodata is provided by © OpenStreetMap contributors and is made available here under the Open Database License (ODbL).
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>request</th>
+      <th>found name</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>germany</td>
+      <td>Deutschland</td>
+      <td>POLYGON ((15.04193 47.27011, 15.04193 55.05857...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>russia</td>
+      <td>Россия</td>
+      <td>POLYGON ((180.00000 41.18510, 180.00000 81.858...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>russia</td>
+      <td>Россия</td>
+      <td>POLYGON ((-168.99798 41.18510, -168.99798 81.8...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions.Regions.to_data_frame">
+<code class="sig-name descname">to_data_frame</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#lets_plot.geo_data.regions.Regions.to_data_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions.Regions.unique_ids">
+<code class="sig-name descname">unique_ids</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#lets_plot.geo_data.regions.Regions.unique_ids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.geo_data.regions.Resolution">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.regions.</code><code class="sig-name descname">Resolution</code><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.city_high">
+<code class="sig-name descname">city_high</code><em class="property"> = 15</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.city_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.city_low">
+<code class="sig-name descname">city_low</code><em class="property"> = 13</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.city_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.city_medium">
+<code class="sig-name descname">city_medium</code><em class="property"> = 14</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.city_medium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.country_high">
+<code class="sig-name descname">country_high</code><em class="property"> = 6</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.country_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.country_low">
+<code class="sig-name descname">country_low</code><em class="property"> = 4</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.country_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.country_medium">
+<code class="sig-name descname">country_medium</code><em class="property"> = 5</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.country_medium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.county_high">
+<code class="sig-name descname">county_high</code><em class="property"> = 12</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.county_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.county_low">
+<code class="sig-name descname">county_low</code><em class="property"> = 10</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.county_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.county_medium">
+<code class="sig-name descname">county_medium</code><em class="property"> = 11</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.county_medium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.state_high">
+<code class="sig-name descname">state_high</code><em class="property"> = 9</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.state_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.state_low">
+<code class="sig-name descname">state_low</code><em class="property"> = 7</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.state_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.state_medium">
+<code class="sig-name descname">state_medium</code><em class="property"> = 8</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.state_medium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.world_high">
+<code class="sig-name descname">world_high</code><em class="property"> = 3</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.world_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.world_low">
+<code class="sig-name descname">world_low</code><em class="property"> = 1</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.world_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="lets_plot.geo_data.regions.Resolution.world_medium">
+<code class="sig-name descname">world_medium</code><em class="property"> = 2</em><a class="headerlink" href="#lets_plot.geo_data.regions.Resolution.world_medium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions.select_not_empty_name">
+<code class="sig-prename descclassname">lets_plot.geo_data.regions.</code><code class="sig-name descname">select_not_empty_name</code><span class="sig-paren">(</span><em class="sig-param">feature: lets_plot.geo_data.gis.response.GeocodedFeature</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#lets_plot.geo_data.regions.select_not_empty_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-lets_plot.geo_data.regions_builder">
+<span id="lets-plot-geo-data-regions-builder-module"></span><h2>lets_plot.geo_data.regions_builder module<a class="headerlink" href="#module-lets_plot.geo_data.regions_builder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lets_plot.geo_data.regions_builder.RegionsBuilder">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.regions_builder.</code><code class="sig-name descname">RegionsBuilder</code><span class="sig-paren">(</span><em class="sig-param">level: Union[str, lets_plot.geo_data.gis.request.LevelKind, None] = None, request: Union[str, List[str], pandas.core.series.Series, None] = None, scope: Union[str, List[str], lets_plot.geo_data.regions.Regions, List[lets_plot.geo_data.regions.Regions], None] = None, highlights: bool = False, progress_callback=None, chunk_size=None, allow_ambiguous=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_builder.RegionsBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.RegionsBuilder.allow_ambiguous">
+<code class="sig-name descname">allow_ambiguous</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions_builder.RegionsBuilder<a class="headerlink" href="#lets_plot.geo_data.regions_builder.RegionsBuilder.allow_ambiguous" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.RegionsBuilder.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions.Regions<a class="headerlink" href="#lets_plot.geo_data.regions_builder.RegionsBuilder.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.RegionsBuilder.chunk_request">
+<code class="sig-name descname">chunk_request</code><span class="sig-paren">(</span><em class="sig-param">on_progress=None</em>, <em class="sig-param">chunk_size=40</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_builder.RegionsBuilder.chunk_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.RegionsBuilder.drop_not_found">
+<code class="sig-name descname">drop_not_found</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions_builder.RegionsBuilder<a class="headerlink" href="#lets_plot.geo_data.regions_builder.RegionsBuilder.drop_not_found" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.RegionsBuilder.drop_not_matched">
+<code class="sig-name descname">drop_not_matched</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions_builder.RegionsBuilder<a class="headerlink" href="#lets_plot.geo_data.regions_builder.RegionsBuilder.drop_not_matched" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.RegionsBuilder.where">
+<code class="sig-name descname">where</code><span class="sig-paren">(</span><em class="sig-param">request: Union[str, List[str], pandas.core.series.Series, None] = None, within: Union[str, List[str], lets_plot.geo_data.regions.Regions, List[lets_plot.geo_data.regions.Regions], shapely.geometry.Polygon, None] = None, near: Union[lets_plot.geo_data.regions.Regions, shapely.geometry.Point, None] = None</em><span class="sig-paren">)</span> &#x2192; RegionsBuilder<a class="headerlink" href="#lets_plot.geo_data.regions_builder.RegionsBuilder.where" title="Permalink to this definition">¶</a></dt>
+<dd><p>If request is not exist - append it to a list with specified scope.
+If request is already exist in the list - specify scope exactly for that request.</p>
+<p>where(request, scope)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).
+For ‘state’ level:
+-‘US-48’ returns continental part of United States (48 states) in a compact form.</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions | shapely.Polygon | None]</em>) – Data can be filtered by scope name or polygon.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+<li><p><strong>near</strong> (<em>[Regions | None]</em>) – Resolve ambiguity by taking object closest to a ‘near’ object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>RegionsBuilder object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If request is mixed with existing and new items scope will be specified for all of them.
+It is allowed to specify scope by chaihing calls of the where method as many times as needed
+while trying to resolve an ambiguity. Latest call defines the value, used by geocoding.</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">regions</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.geo_data.regions_builder.ShapelyWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.regions_builder.</code><code class="sig-name descname">ShapelyWrapper</code><a class="headerlink" href="#lets_plot.geo_data.regions_builder.ShapelyWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.ShapelyWrapper.is_point">
+<em class="property">static </em><code class="sig-name descname">is_point</code><span class="sig-paren">(</span><em class="sig-param">p</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#lets_plot.geo_data.regions_builder.ShapelyWrapper.is_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.ShapelyWrapper.is_polygon">
+<em class="property">static </em><code class="sig-name descname">is_polygon</code><span class="sig-paren">(</span><em class="sig-param">p</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_builder.ShapelyWrapper.is_polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.regions_builder.ShapelyWrapper.is_shapely_available">
+<em class="property">static </em><code class="sig-name descname">is_shapely_available</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_builder.ShapelyWrapper.is_shapely_available" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lets_plot.geo_data.to_geo_data_frame">
+<span id="lets-plot-geo-data-to-geo-data-frame-module"></span><h2>lets_plot.geo_data.to_geo_data_frame module<a class="headerlink" href="#module-lets_plot.geo_data.to_geo_data_frame" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lets_plot.geo_data.to_geo_data_frame.BoundariesGeoDataFrame">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.to_geo_data_frame.</code><code class="sig-name descname">BoundariesGeoDataFrame</code><a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.BoundariesGeoDataFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lets_plot.geo_data.regions.DataFrameProvider" title="lets_plot.geo_data.regions.DataFrameProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">lets_plot.geo_data.regions.DataFrameProvider</span></code></a></p>
+<dl class="method">
+<dt id="lets_plot.geo_data.to_geo_data_frame.BoundariesGeoDataFrame.to_data_frame">
+<code class="sig-name descname">to_data_frame</code><span class="sig-paren">(</span><em class="sig-param">features: List[lets_plot.geo_data.gis.response.GeocodedFeature]</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.BoundariesGeoDataFrame.to_data_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.geo_data.to_geo_data_frame.CentroidsGeoDataFrame">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.to_geo_data_frame.</code><code class="sig-name descname">CentroidsGeoDataFrame</code><a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.CentroidsGeoDataFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lets_plot.geo_data.regions.DataFrameProvider" title="lets_plot.geo_data.regions.DataFrameProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">lets_plot.geo_data.regions.DataFrameProvider</span></code></a></p>
+<dl class="method">
+<dt id="lets_plot.geo_data.to_geo_data_frame.CentroidsGeoDataFrame.to_data_frame">
+<code class="sig-name descname">to_data_frame</code><span class="sig-paren">(</span><em class="sig-param">features: List[lets_plot.geo_data.gis.response.GeocodedFeature]</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.CentroidsGeoDataFrame.to_data_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.geo_data.to_geo_data_frame.LimitsGeoDataFrame">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.to_geo_data_frame.</code><code class="sig-name descname">LimitsGeoDataFrame</code><a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.LimitsGeoDataFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame" title="lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.geo_data.to_geo_data_frame.PositionsGeoDataFrame">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.to_geo_data_frame.</code><code class="sig-name descname">PositionsGeoDataFrame</code><a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.PositionsGeoDataFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame" title="lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.geo_data.to_geo_data_frame.</code><code class="sig-name descname">RectGeoDataFrame</code><a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lets_plot.geo_data.regions.DataFrameProvider" title="lets_plot.geo_data.regions.DataFrameProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">lets_plot.geo_data.regions.DataFrameProvider</span></code></a></p>
+<dl class="method">
+<dt id="lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame.intersected_by_antimeridian">
+<em class="property">static </em><code class="sig-name descname">intersected_by_antimeridian</code><span class="sig-paren">(</span><em class="sig-param">lonmin: float</em>, <em class="sig-param">lonmax: float</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame.intersected_by_antimeridian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame.limit2geometry">
+<em class="property">static </em><code class="sig-name descname">limit2geometry</code><span class="sig-paren">(</span><em class="sig-param">lonmin: float</em>, <em class="sig-param">latmin: float</em>, <em class="sig-param">lonmax: float</em>, <em class="sig-param">latmax: float</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame.limit2geometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame.to_data_frame">
+<code class="sig-name descname">to_data_frame</code><span class="sig-paren">(</span><em class="sig-param">features: List[lets_plot.geo_data.gis.response.GeocodedFeature]</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#lets_plot.geo_data.to_geo_data_frame.RectGeoDataFrame.to_data_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lets_plot.geo_data.type_assertion">
+<span id="lets-plot-geo-data-type-assertion-module"></span><h2>lets_plot.geo_data.type_assertion module<a class="headerlink" href="#module-lets_plot.geo_data.type_assertion" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lets_plot.geo_data.type_assertion.assert_list_type">
+<code class="sig-prename descclassname">lets_plot.geo_data.type_assertion.</code><code class="sig-name descname">assert_list_type</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">*types</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.type_assertion.assert_list_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.type_assertion.assert_optional_list_type">
+<code class="sig-prename descclassname">lets_plot.geo_data.type_assertion.</code><code class="sig-name descname">assert_optional_list_type</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">*types</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.type_assertion.assert_optional_list_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.type_assertion.assert_optional_tuple_type">
+<code class="sig-prename descclassname">lets_plot.geo_data.type_assertion.</code><code class="sig-name descname">assert_optional_tuple_type</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">*types</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.type_assertion.assert_optional_tuple_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.type_assertion.assert_optional_type">
+<code class="sig-prename descclassname">lets_plot.geo_data.type_assertion.</code><code class="sig-name descname">assert_optional_type</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">*types</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.type_assertion.assert_optional_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.type_assertion.assert_tuple_type">
+<code class="sig-prename descclassname">lets_plot.geo_data.type_assertion.</code><code class="sig-name descname">assert_tuple_type</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">*types</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.type_assertion.assert_tuple_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.type_assertion.assert_type">
+<code class="sig-prename descclassname">lets_plot.geo_data.type_assertion.</code><code class="sig-name descname">assert_type</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">*types</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.type_assertion.assert_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-lets_plot.geo_data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lets_plot.geo_data" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="lets_plot.geo_data.distance">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">distance</code><span class="sig-paren">(</span><em class="sig-param">lon0</em>, <em class="sig-param">lat0</em>, <em class="sig-param">lon1</em>, <em class="sig-param">lat1</em>, <em class="sig-param">units='km'</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the distance between two points. Returns result in kilometers or miles.</p>
+<p>distance(lon0, lat0, lon1, lat1, units)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lon0</strong> (<em>number</em>) – Longitude coordinate of the first point.</p></li>
+<li><p><strong>lat0</strong> (<em>number</em>) – Latitude coordinate of the first point.</p></li>
+<li><p><strong>lon1</strong> (<em>number</em>) – Longitude coordinate of the second point.</p></li>
+<li><p><strong>lat1</strong> (<em>number</em>) – Latitude coordinate of the second point.</p></li>
+<li><p><strong>units</strong> (<em>[string | None]</em>) – The units in which the result will be obtained.
+There are shorthands for values: ‘mi’(miles), ‘km’(kilometers).
+Default is kilometers.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>object</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>distance() calculates the distance between two points.</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dist</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="o">-</span><span class="mf">99.25061</span><span class="p">,</span> <span class="mf">31.25044</span><span class="p">,</span> <span class="o">-</span><span class="mf">105.50083</span><span class="p">,</span> <span class="mf">39.00027</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions_builder">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">regions_builder</code><span class="sig-paren">(</span><em class="sig-param">level=None</em>, <em class="sig-param">request=None</em>, <em class="sig-param">within=None</em>, <em class="sig-param">highlights=False</em><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions_builder.RegionsBuilder<a class="headerlink" href="#lets_plot.geo_data.regions_builder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a RegionBuilder class by level and request. Allows to refine ambiguous request with
+where method. build() method creates Regions object or shows details for ambiguous result.</p>
+<p>regions_builder(level, request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> (<em>[‘country’ | ‘state’ | ‘county’ | ‘city’ | None]</em>) – The level of administrative division. Default is a ‘state’.</p></li>
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).
+For ‘state’ level:
+-‘US-48’ returns continental part of United States (48 states) in a compact form.</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions | None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>RegionsBuilder object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_builder() allows to refine ambiguous request with where() method. Call build() method to create Regions object</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">regions_builder</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;moscow&#39;</span><span class="p">,</span> <span class="s1">&#39;york&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s1">&#39;york&#39;</span><span class="p">,</span> <span class="n">regions_state</span><span class="p">(</span><span class="s1">&#39;New York&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">regions</code><span class="sig-paren">(</span><em class="sig-param">level=None</em>, <em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span> &#x2192; lets_plot.geo_data.regions.Regions<a class="headerlink" href="#lets_plot.geo_data.regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class by level and request.</p>
+<p>regions(level, request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> (<em>[‘country’ | ‘state’ | ‘county’ | ‘city’ | None]</em>) – The level of administrative division. None is for autodetection, falls back to a ‘state’ in case of ambiguity.</p></li>
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).
+None with explicit level returns all corresponding regions, like all countries i.e. regions(level=’country’).
+For ‘state’ level:
+-‘US-48’ returns continental part of United States (48 states) in a compact form.</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions() is used to get name and object id by level and request.
+If the given names are not found exception will be thrown.</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">regions</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions_country">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">regions_country</code><span class="sig-paren">(</span><em class="sig-param">request=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_country" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for country level by request.</p>
+<p>regions_country(request)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_country() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_country</span> <span class="o">=</span> <span class="n">regions_country</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions_state">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">regions_state</code><span class="sig-paren">(</span><em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for state level by request.</p>
+<p>regions_state(request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).
+For ‘state’ level:
+-‘US-48’ returns continental part of United States (48 states) in a compact form.</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then filter and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_state() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_state</span> <span class="o">=</span> <span class="n">regions_state</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Texas&#39;</span><span class="p">,</span> <span class="s1">&#39;Iowa&#39;</span><span class="p">],</span> <span class="n">within</span><span class="o">=</span><span class="s1">&#39;USA&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions_county">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">regions_county</code><span class="sig-paren">(</span><em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_county" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for county level by request.</p>
+<p>regions_county(request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_county() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_county</span> <span class="o">=</span> <span class="n">regions_county</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Calhoun County&#39;</span><span class="p">,</span> <span class="s1">&#39;Howard County&#39;</span><span class="p">],</span> <span class="n">within</span><span class="o">=</span><span class="s1">&#39;Texas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions_city">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">regions_city</code><span class="sig-paren">(</span><em class="sig-param">request=None</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_city" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Regions class for city level by request.</p>
+<p>regions_city(request, within)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>[array | string | None]</em>) – Data can be filtered by full names at any level (only exact matching).</p></li>
+<li><p><strong>within</strong> (<em>[array | string | Regions| None]</em>) – Data can be filtered by within name.
+If within is array then request and within will be merged positionally (size should be equal).
+If within is Regions then request will be searched in any of these regions.
+‘US-48’ includes continental part of United States (48 states).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Regions object</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>regions_city() is used to get name and object id by request.
+If the given names are not found exception will be thrown.
+See also regions().</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot.geo_data</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r_city</span> <span class="o">=</span> <span class="n">regions_city</span><span class="p">(</span><span class="n">request</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.regions_xy">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">regions_xy</code><span class="sig-paren">(</span><em class="sig-param">lon</em>, <em class="sig-param">lat</em>, <em class="sig-param">level</em>, <em class="sig-param">within=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geo_data.regions_xy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.geo_data.split_by_antimeridian">
+<code class="sig-prename descclassname">lets_plot.geo_data.</code><code class="sig-name descname">split_by_antimeridian</code><span class="sig-paren">(</span><em class="sig-param">df: pandas.core.frame.DataFrame</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#lets_plot.geo_data.split_by_antimeridian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.html" title="lets_plot.plot package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.frontend_context.html" title="lets_plot.frontend_context package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="lets_plot.html" >lets_plot package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, JetBrains.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>lets_plot.plot.plot module &#8212; lets-plot  documentation</title>
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="lets_plot.plot.pos module" href="lets_plot.plot.pos.html" />
+    <link rel="prev" title="lets_plot.plot.label module" href="lets_plot.plot.label.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.pos.html" title="lets_plot.plot.pos module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.label.html" title="lets_plot.plot.label module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" accesskey="U">lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lets_plot.plot.label.html"
+                        title="previous chapter">lets_plot.plot.label module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lets_plot.plot.pos.html"
+                        title="next chapter">lets_plot.plot.pos module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/autodoc/lets_plot.plot_package/lets_plot.plot.plot.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lets_plot.plot.plot">
+<span id="lets-plot-plot-plot-module"></span><h1>lets_plot.plot.plot module<a class="headerlink" href="#module-lets_plot.plot.plot" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="lets_plot.plot.plot.ggplot">
+<code class="sig-prename descclassname">lets_plot.plot.plot.</code><code class="sig-name descname">ggplot</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">mapping=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.plot.ggplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new ggplot plot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>dictionary or pandas DataFrame, optional</em>) – Default dataset to use for the plot. If not specified, must be supplied in each layer added to the plot.</p></li>
+<li><p><strong>mapping</strong> (<em>dictionary, optional</em>) – Default list of aesthetic mappings to use for the plot. If not specified, must be supplied in each layer
+added to the plot.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>plot specification</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ggplot() initializes a ggplot object. It can be used to declare the input data frame for a graphic and to
+specify the set of plot aesthetics intended to be common throughout all subsequent layers unless specifically
+overridden.
+ggplot() is typically used to construct a plot incrementally, using the + operator to add layers to the
+existing ggplot object. This is advantageous in that the code is explicit about which layers are added
+and the order in which they are added. For complex graphics with multiple layers, initialization with
+ggplot() is recommended.
+There are three common ways to invoke ggplot (see examples below):</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>ggplot(dat,aes(x,y)) :</dt><dd><p>This method is recommended if all layers use the same data and the same set of aesthetics, although
+this method can also be used to add a layer using data from another data frame.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ggplot(dat) :</dt><dd><p>This method specifies the default data frame to use for the plot, but no aesthetics are defined up front.
+This is useful when one data frame is used predominantly as layers are added, but the aesthetics may vary
+from one layer to another.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ggplot() :</dt><dd><p>This method initializes a skeleton ggplot object which is fleshed out as layers are added. This method is
+useful when multiple data frames are used to produce different layers, as is often the case in complex
+graphics.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>ggplot() with no layers defined will produce an error message: “No layers in plot”</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span> <span class="k">if</span> <span class="n">dat</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;1&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># three ways to invoke ggplot, producing the same output:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># (1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">layer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># (2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span> <span class="o">+</span> <span class="n">layer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># (3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">()</span> <span class="o">+</span> <span class="n">layer</span><span class="p">(</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="s1">&#39;identity&#39;</span><span class="p">,</span> <span class="n">dat</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.plot.plot.ggsize">
+<code class="sig-prename descclassname">lets_plot.plot.plot.</code><code class="sig-name descname">ggsize</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">height</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.plot.ggsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies overall size of plot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<em>number</em>) – Width of plot in px.</p></li>
+<li><p><strong>height</strong> (<em>number</em>) – Height of plot in px.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>plot size specification</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span> <span class="o">+</span> <span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">ggsize</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="lets_plot.plot.plot.GGBunch">
+<em class="property">class </em><code class="sig-prename descclassname">lets_plot.plot.plot.</code><code class="sig-name descname">GGBunch</code><a class="headerlink" href="#lets_plot.plot.plot.GGBunch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">lets_plot.plot.core.FeatureSpec</span></code></p>
+<p>Collection of plots created by ggplot function.
+Use method add_plot() to add plot to ‘bunch’. Each plot can have arbitrary location and size.
+Use show() to draw all plots in bunch.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="n">aes</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">ggsize</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bunch</span> <span class="o">=</span> <span class="n">GGBunch</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bunch</span><span class="o">.</span><span class="n">add_plot</span><span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bunch</span><span class="o">.</span><span class="n">add_plot</span><span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bunch</span><span class="o">.</span><span class="n">add_plot</span><span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">geom_line</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bunch</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="lets_plot.plot.plot.GGBunch.add_plot">
+<code class="sig-name descname">add_plot</code><span class="sig-paren">(</span><em class="sig-param">plot_spec: lets_plot.plot.core.PlotSpec</em>, <em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">width=None</em>, <em class="sig-param">height=None</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.plot.GGBunch.add_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds plot to ‘bunch’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plot_spec</strong> (<em>value of ggplot()</em>) – Plot specification created by ggplot() function</p></li>
+<li><p><strong>x</strong> (<em>number</em>) – x-coordinate of plot origin in px.</p></li>
+<li><p><strong>y</strong> (<em>number</em>) – y-coordinate of plot origin in px.</p></li>
+<li><p><strong>width</strong> (<em>number</em>) – Width of plot in px.</p></li>
+<li><p><strong>height</strong> – Height of plot in px.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.plot.plot.GGBunch.as_dict">
+<code class="sig-name descname">as_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.plot.GGBunch.as_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="lets_plot.plot.plot.GGBunch.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.plot.GGBunch.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw all plots currently in this ‘bunch’</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.pos.html" title="lets_plot.plot.pos module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.label.html" title="lets_plot.plot.label module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" >lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, JetBrains.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

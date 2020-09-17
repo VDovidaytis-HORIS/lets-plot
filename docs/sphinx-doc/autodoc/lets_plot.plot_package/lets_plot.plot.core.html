@@ -1,0 +1,208 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>lets_plot.plot.core module &#8212; lets-plot  documentation</title>
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="lets_plot.plot.facet module" href="lets_plot.plot.facet.html" />
+    <link rel="prev" title="lets_plot.plot.coord module" href="lets_plot.plot.coord.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.facet.html" title="lets_plot.plot.facet module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.coord.html" title="lets_plot.plot.coord module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" accesskey="U">lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lets_plot.plot.coord.html"
+                        title="previous chapter">lets_plot.plot.coord module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lets_plot.plot.facet.html"
+                        title="next chapter">lets_plot.plot.facet module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/autodoc/lets_plot.plot_package/lets_plot.plot.core.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lets_plot.plot.core">
+<span id="lets-plot-plot-core-module"></span><h1>lets_plot.plot.core module<a class="headerlink" href="#module-lets_plot.plot.core" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="lets_plot.plot.core.aes">
+<code class="sig-prename descclassname">lets_plot.plot.core.</code><code class="sig-name descname">aes</code><span class="sig-paren">(</span><em class="sig-param">x=None</em>, <em class="sig-param">y=None</em>, <em class="sig-param">**other</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.core.aes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define aesthetic mappings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x, y, …</strong> (<em>List of name value pairs giving aesthetics to map to variables.</em>)</p></li>
+<li><p><strong>The names for x and y aesthetics are typically omitted because they are so common; all other aesthetics must be named.</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>aesthetic mapping specification</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generates aesthetic mappings that describe how variables in the data are projected to visual properties
+(aesthetics) of geometries. This function also standardizes aesthetic names by, for example, converting
+colour to color.</p>
+<p>Aesthetic mappings are not to be confused with aesthetic settings; the latter are used to set aesthetics to
+some constant values, e.g. make all points red in the plot. If one wants to make the color of a point
+depend on the value of a variable, he/she should project this variable to the color aesthetic via
+aesthetic mapping.</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span> <span class="k">if</span> <span class="n">dat</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;1&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">))</span> <span class="o">+</span>
+<span class="gp">... </span><span class="n">geom_point</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;smooth&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.plot.core.layer">
+<code class="sig-prename descclassname">lets_plot.plot.core.</code><code class="sig-name descname">layer</code><span class="sig-paren">(</span><em class="sig-param">geom=None</em>, <em class="sig-param">stat=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">mapping=None</em>, <em class="sig-param">position=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.core.layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geom</strong> (<em>string</em>) – The geometric object to use to display the data</p></li>
+<li><p><strong>stat</strong> (<em>string, optional</em>) – The statistical transformation to use on the data for this layer, as a string. Supported transformations:
+“identity” (leaves the data unchanged), “count” (counts number of points with same x-axis coordinate),
+“bin” (counts number of points with x-axis coordinate in the same bin), “smooth” (performs smoothing -
+linear default)</p></li>
+<li><p><strong>data</strong> (<em>dictionary or pandas DataFrame, optional</em>) – The data to be displayed in this layer. If None, the default, the data
+is inherited from the plot data as specified in the call to ggplot.</p></li>
+<li><p><strong>mapping</strong> (<em>dictionary, optional</em>) – Set of aesthetic mappings created by aes. Aesthetic mappings describe the way that variables in the data are
+mapped to plot “aesthetics”.</p></li>
+<li><p><strong>position</strong> (<em>string, optional</em>) – Position adjustment, either as a string (“identity”, “stack”, “dodge”,…), or the result of a call to a
+position adjustment function.</p></li>
+<li><p><strong>kwargs</strong> – Other arguments passed on to layer. These are often aesthetics settings, used to set an aesthetic to a fixed
+value, like color = “red”, fill = “blue”, size = 3 or shape = 21. They may also be parameters to the
+paired geom/stat.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>geom object specification</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A layer is a combination of data, stat and geom with a potential position adjustment. Usually layers are created
+using geom_* or stat_* calls but they can be created directly using this function.</p>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span> <span class="k">if</span> <span class="n">dat</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;1&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">layer</span><span class="p">(</span><span class="n">geom</span><span class="o">=</span><span class="s1">&#39;point&#39;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;smooth&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;identity&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>todo: other parameters:
+inherit.aes = TRUE, subset = NULL, show.legend = NA</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.facet.html" title="lets_plot.plot.facet module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.coord.html" title="lets_plot.plot.coord module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" >lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, JetBrains.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

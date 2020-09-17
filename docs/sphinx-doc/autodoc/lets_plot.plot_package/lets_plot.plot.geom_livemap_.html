@@ -1,0 +1,194 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>lets_plot.plot.geom_livemap_ module &#8212; lets-plot  documentation</title>
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="lets_plot.plot.guide module" href="lets_plot.plot.guide.html" />
+    <link rel="prev" title="lets_plot.plot.geom_image_ module" href="lets_plot.plot.geom_image_.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.guide.html" title="lets_plot.plot.guide module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.geom_image_.html" title="lets_plot.plot.geom_image_ module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" accesskey="U">lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lets_plot.plot.geom_image_.html"
+                        title="previous chapter">lets_plot.plot.geom_image_ module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lets_plot.plot.guide.html"
+                        title="next chapter">lets_plot.plot.guide module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/autodoc/lets_plot.plot_package/lets_plot.plot.geom_livemap_.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lets_plot.plot.geom_livemap_">
+<span id="lets-plot-plot-geom-livemap-module"></span><h1>lets_plot.plot.geom_livemap_ module<a class="headerlink" href="#module-lets_plot.plot.geom_livemap_" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="lets_plot.plot.geom_livemap_.geom_livemap">
+<code class="sig-prename descclassname">lets_plot.plot.geom_livemap_.</code><code class="sig-name descname">geom_livemap</code><span class="sig-paren">(</span><em class="sig-param">mapping=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">symbol=None</em>, <em class="sig-param">show_legend=None</em>, <em class="sig-param">sampling=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">zoom=None</em>, <em class="sig-param">projection=None</em>, <em class="sig-param">geodesic=None</em>, <em class="sig-param">tiles=None</em>, <em class="sig-param">map=None</em>, <em class="sig-param">map_join=None</em>, <em class="sig-param">**other_args</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.geom_livemap_.geom_livemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a live map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mapping</strong> (<em>set of aesthetic mappings created by aes() function.</em>) – Aesthetic mappings describe the way that variables in the data are
+mapped to plot “aesthetics”.</p></li>
+<li><p><strong>data</strong> (<em>dictionary or pandas DataFrame, optional</em>) – The data to be displayed in this layer. If None, the default, the data
+is inherited from the plot data as specified in the call to ggplot.</p></li>
+<li><p><strong>map</strong> (<em>GeoDataFrame (supported shapes Point and MultiPoint) or Regions (implicitly invoke centroids())</em>) – Data containing coordinates of points.</p></li>
+<li><p><strong>map_join</strong> (<em>str, pair, optional</em>) – Pair of names used to join map coordinates with data.
+str is allowed only when used with Regions object - map key ‘request’ will be automatically added.
+first value in pair - column in data
+second value in pair - column in map</p></li>
+<li><p><strong>symbol</strong> (<em>string, optional</em>) – The marker used for displaying the data. There are:
+- ‘point’ for circles of different size and color.
+- ‘pie’ for pie charts.
+- ‘bar’ for bar charts.</p></li>
+<li><p><strong>location</strong> (<em>array, optional</em>) – Initial position of the map. If not set, displays the United States.
+There are [lon1, lat1, lon2, lat2,…, lonN, latN].
+- lon1, lon2,…, lonN are longitudes in degrees (positive in the Eastern hemisphere).
+- lat1, lat2,…, latN are latitudes in degrees (positive in the Northern hemisphere).</p></li>
+<li><p><strong>zoom</strong> (<em>integer, optional</em>) – Zoom of the map in the range 1 - 15.</p></li>
+<li><p><strong>tiles</strong> (<em>string, optional</em>) – Tiles provider, either as a string - URL for a standard raster ZXY tile provider with {z}, {x} and {y} wildcards
+(e.g. ‘<a class="reference external" href="http://my.tile.com">http://my.tile.com</a>/{z}/{x}/{y}.png’) or the result of a call to a maptiles_xxx functions</p></li>
+<li><p><strong>projection</strong> (<em>string, optional</em>) – The map projection. There are:
+- ‘epsg3857’ for Mercator projection (default).
+- ‘epsg4326’ for Equirectangular projection.</p></li>
+<li><p><strong>geodesic</strong> (<em>True (default) or False, optional</em>) – Enables geodesic type of all paths and segments</p></li>
+<li><p><strong>other_args</strong> – Other arguments passed on to layer. These are often aesthetics settings, used to set an aesthetic to a fixed
+value, like color = “red”, fill = “blue”, size = 3, stroke = 2 or shape = 21. They may also be parameters to
+the paired geom/stat.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>geom object specification</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>geom_livemap draws map, which can be moved and zoomed.
+geom_livemap understands the following aesthetics mappings:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>alpha<span class="classifier">transparency level of a layer</span></dt><dd><p>Understands numbers between 0 and 1.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>color (colour)<span class="classifier">color of a geometry lines</span></dt><dd><p>Can be continuous or discrete. For continuous value this will be a color gradient between two colors.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>fill<span class="classifier">color of a geometry internals</span></dt><dd><p>Can be continuous or discrete. For continuous value this will be a color gradient between two colors.</p>
+</dd>
+</dl>
+</li>
+<li><p>size : radius for point, pie chart.</p></li>
+<li><p>sym_x : value order for pie chart and bar chart.</p></li>
+<li><p>sym_y : value specifying the sector size for pie chart and the heigth for bar chart.</p></li>
+</ul>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">ggplot</span><span class="p">()</span> <span class="o">+</span> <span class="n">geom_livemap</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">+=</span> <span class="n">ggtitle</span><span class="p">(</span><span class="s1">&#39;Live Map&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.guide.html" title="lets_plot.plot.guide module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.geom_image_.html" title="lets_plot.plot.geom_image_ module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" >lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, JetBrains.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

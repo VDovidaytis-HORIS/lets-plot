@@ -1,0 +1,149 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>lets_plot.plot.theme_ module &#8212; lets-plot  documentation</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">lets-plot  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autodoc/lets_plot.plot.theme_.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lets_plot.plot.theme_">
+<span id="lets-plot-plot-theme-module"></span><h1>lets_plot.plot.theme_ module<a class="headerlink" href="#module-lets_plot.plot.theme_" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="lets_plot.plot.theme_.theme">
+<code class="sig-prename descclassname">lets_plot.plot.theme_.</code><code class="sig-name descname">theme</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">axis_title=None</em>, <em class="sig-param">axis_title_x=None</em>, <em class="sig-param">axis_title_y=None</em>, <em class="sig-param">axis_text=None</em>, <em class="sig-param">axis_text_x=None</em>, <em class="sig-param">axis_text_y=None</em>, <em class="sig-param">axis_ticks=None</em>, <em class="sig-param">axis_ticks_x=None</em>, <em class="sig-param">axis_ticks_y=None</em>, <em class="sig-param">axis_line=None</em>, <em class="sig-param">axis_line_x=None</em>, <em class="sig-param">axis_line_y=None</em>, <em class="sig-param">legend_position=None</em>, <em class="sig-param">legend_justification=None</em>, <em class="sig-param">legend_direction=None</em>, <em class="sig-param">axis_tooltip=None</em>, <em class="sig-param">axis_tooltip_x=None</em>, <em class="sig-param">axis_tooltip_y=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.theme_.theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use theme() to modify individual components of a theme,
+allowing you to control the appearance of all non-data components of the plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axis_title</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – label of axes</p></li>
+<li><p><strong>axis_title_x</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – x axis label</p></li>
+<li><p><strong>axis_title_y</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – y axis label</p></li>
+<li><p><strong>axis_text</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – tick labels along axes</p></li>
+<li><p><strong>axis_text_x</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – x axis tick labels</p></li>
+<li><p><strong>axis_text_y</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – y axis tick labels</p></li>
+<li><p><strong>axis_ticks</strong> (<em>result of element_line() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – tick marks along axes</p></li>
+<li><p><strong>axis_ticks_x</strong> (<em>result of element_line() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – x axis tick marks</p></li>
+<li><p><strong>axis_ticks_y</strong> (<em>result of element_line() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – y axis tick marks</p></li>
+<li><p><strong>axis_line</strong> (<em>result of element_line() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – lines along axes</p></li>
+<li><p><strong>axis_line_x</strong> (<em>result of element_line() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – line along x axis</p></li>
+<li><p><strong>axis_line_y</strong> (<em>result of element_line() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – line along y axis</p></li>
+<li><p><strong>legend_position</strong> (<em>[‘none’ | ‘left’ | ‘right’ | ‘bottom’ | ‘top’] or two-element numeric vector.</em>) – The position of legends. “none” - remove the plot legend.</p></li>
+<li><p><strong>legend_justification</strong> (<em>“center” or two-element numeric vector.</em>) – Anchor point for positioning legend.</p></li>
+<li><p><strong>legend_direction</strong> (<em>[“horizontal” | “vertical”]</em>) – Layout of items in legends.</p></li>
+<li><p><strong>axis_tooltip</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – axes tooltips</p></li>
+<li><p><strong>axis_tooltip_x</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – x axis tooltips</p></li>
+<li><p><strong>axis_tooltip_y</strong> (<em>result of element_text() or [element_blank() | ‘blank’] to draw nothing and assign no space.</em>) – y axis tooltips</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>theme specification</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="n">y</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dat</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">colors</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span> <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">dat</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">))</span> <span class="o">+</span>
+<span class="gp">... </span><span class="n">scale_color_gradient</span><span class="p">(</span><span class="n">guide</span><span class="o">=</span><span class="n">guide_colorbar</span><span class="p">(</span><span class="n">nbin</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">barheight</span><span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">barwidth</span><span class="o">=</span><span class="mi">300</span><span class="p">))</span> <span class="o">+</span>
+<span class="gp">... </span><span class="n">theme</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="lets_plot.plot.theme_.element_blank">
+<code class="sig-prename descclassname">lets_plot.plot.theme_.</code><code class="sig-name descname">element_blank</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.plot.theme_.element_blank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">lets-plot  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, JetBrains.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

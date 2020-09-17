@@ -1,0 +1,150 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>lets_plot.plot.image_matrix module &#8212; lets-plot  documentation</title>
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="lets_plot.plot.label module" href="lets_plot.plot.label.html" />
+    <link rel="prev" title="lets_plot.plot.guide module" href="lets_plot.plot.guide.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.label.html" title="lets_plot.plot.label module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.guide.html" title="lets_plot.plot.guide module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" accesskey="U">lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lets_plot.plot.guide.html"
+                        title="previous chapter">lets_plot.plot.guide module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lets_plot.plot.label.html"
+                        title="next chapter">lets_plot.plot.label module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/autodoc/lets_plot.plot_package/lets_plot.plot.image_matrix.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lets_plot.plot.image_matrix">
+<span id="lets-plot-plot-image-matrix-module"></span><h1>lets_plot.plot.image_matrix module<a class="headerlink" href="#module-lets_plot.plot.image_matrix" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="lets_plot.plot.image_matrix.gg_image_matrix">
+<code class="sig-prename descclassname">lets_plot.plot.image_matrix.</code><code class="sig-name descname">gg_image_matrix</code><span class="sig-paren">(</span><em class="sig-param">image_data_array</em>, <em class="sig-param">*</em>, <em class="sig-param">norm: bool = None</em>, <em class="sig-param">scale=1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lets_plot.plot.image_matrix.gg_image_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display images in a grid.
+The grid dimensions are determined by shape of the input 2D ndarray.</p>
+<p>Elements of the input 2D array are images specified by ndarrays with shape (n, m) or (n, m, 3) or (n, m, 4).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_data_array</strong> (<em>2D numpy.ndarray containing images</em>) – Specifies dimensions of output grid</p></li>
+<li><p><strong>norm</strong> (<em>bool</em>) – False - disables default scaling of a luminance (grayscale) images to the (0, 255) range.</p></li>
+<li><p><strong>scale</strong> (<em>scalar, default: 1</em>) – Specifies magnification factor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gg_image_matrix</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.label.html" title="lets_plot.plot.label module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lets_plot.plot.guide.html" title="lets_plot.plot.guide module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">lets-plot  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../lets_plot.html" >lets_plot package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../lets_plot.plot.html" >lets_plot.plot package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, JetBrains.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>
